@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Polynomial()
+comment1.params=
+comment1.target=int\ numberOfTerms()
+comment2.params=t
+comment2.target=void\ addTerm(Term)
+comment3.params=k
+comment3.target=Term\ getTerm(int)
+comment4.params=
+comment4.target=java.lang.String\ display()
+numComments=5

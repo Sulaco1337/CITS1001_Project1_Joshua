@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=s
+comment0.target=Sequence(java.lang.String)
+comment1.params=
+comment1.target=double[]\ getSequence()
+comment2.params=x
+comment2.target=int\ factorial(int)
+comment3.params=
+comment3.target=boolean\ allEqual()
+comment4.params=
+comment4.target=double[]\ differences()
+comment5.params=t
+comment5.target=void\ updateSequence(Term)
+comment6.params=
+comment6.target=Term\ nextTerm()
+comment7.params=
+comment7.target=Polynomial\ solveSequence()
+numComments=8
