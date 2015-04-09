@@ -35,7 +35,7 @@ public class Sequence
     // returns the product of 1..x 
     public int factorial(int x)
     {
-        // TODO
+        // TODO MAKE A LOOP
         return 1;
     }
 
