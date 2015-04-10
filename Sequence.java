@@ -18,7 +18,7 @@ public class Sequence
             Double d = Double.parseDouble(StringArray[i]);
             sequence[i] = d;
         }
-
+	
         // TODO
     }
 
@@ -32,26 +32,32 @@ public class Sequence
     public int factorial(int x)
     { int result = 1; 
       for (int i = 1; i <= x; i++) {
-          result = result * i; // I FEEL LIKE SOMETHING SHOULD GO HERE! SUBBING RESULT BACK INTO X????? SEEV BELOW
-         
+          result = result * i; 
           
+        
         }
 
-        return 1;
+        return result;
     }
 
     // returns true iff all of the items on sequence are equal 
     public boolean allEqual()
-    {
+    { for (int i =0;i < sequence.length -1;i++){
+    if (sequence[i] != sequence[i+1]) return false; }
+
         // TODO
         return true;
     }
 
     // returns a new array holding the differences between adjacent items on sequence 
     public double[] differences()
-    {
+    { 
+    double[] seqDiff = new double[sequence.length -1]
+    for (int i =0;i < sequence.length -1;i++){ 
+	  seqDiff[i] = sequence[i+1] - sequence[i]
+       }
         // TODO
-        return null;
+        return seqDiff;
     }
 
     // subtracts from each item in sequence the effect of the term t 
@@ -64,9 +70,14 @@ public class Sequence
     // returns the next term in the simplest polynomial that generates sequence 
     // implements Steps 1-3 of the algorithm description on the project web page 
     public Term nextTerm()
-    {
-        // TODO
-        return new Term(0, 0);
+    { int NoRuns = 0;
+    double[] T = sequence;
+    while(!allEqual){ sequence = differences();
+    NoRuns = NoRuns + 1; 
+    }
+    sequence = T
+      
+        return new Term(sequence[0]/factorial(NoRuns), NoRuns);
     }
 
     // returns the simplest polynomial that generates sequence and displays the polynomial as a String 
