@@ -9,18 +9,14 @@ import java.lang.*;
 
 public class Sequence
 {
-    // the numbers in the sequence
     private double[] sequence;
-
-    // sets up sequence by parsing s 
-    // the numbers in s will be separated by commas 
     public Sequence(String s)
     { String[] StringArray = s.split(",");
         int StringArrayLength = StringArray.length;
         sequence = new double[StringArrayLength];
         for (int i =0; i < StringArrayLength; i++){
             Double d = Double.parseDouble(StringArray[i]);
-			sequence[i] = d;
+            sequence[i] = d;
         }
 
         // TODO
@@ -34,8 +30,11 @@ public class Sequence
 
     // returns the product of 1..x 
     public int factorial(int x)
-    {
-        // TODO MAKE A LOOP
+    { int result = 1; 
+      for (int i = 1; i <= x; i++) {
+          result = result * i;
+        }
+
         return 1;
     }
 
