@@ -32,7 +32,8 @@ public class Sequence
     public int factorial(int x)
     { int result = 1; 
       for (int i = 1; i <= x; i++) {
-          result = result * i;
+          result = result * i; // I FEEL LIKE SOMETHING SHOULD GO HERE! SUBBING RESULT BACK INTO X????? SEEV BELOW
+          x = result;
         }
 
         return 1;
