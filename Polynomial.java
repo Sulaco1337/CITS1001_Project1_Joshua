@@ -46,7 +46,7 @@ public class Polynomial
         } 
     if (result.charAt(1) == '-'){
         return result.substring(1);
-        else
+       } else
 	  return result.substring(3);
     }
 }
