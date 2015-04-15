@@ -32,13 +32,25 @@ public class Term
     // see the sample file for the layout required 
     public String display()
     { String result = "";
-if (coefficient < 0){ result = result + "- " + ((String) (-1 *  coefficient))};
-   else result = result + "+ " + (String) coefficient;
+    if(coefficient==0){
+    return "+ 0";}
+    else if(coefficient%1==0){
+    //is int
+    if (coefficient < 0){ result = result + "- " + (String.ValueOf((int) -1 *  coefficient));}
+   else if(coefficient == 1 && exponent != 0){
+   result = result + "+ "}
+   else result = result + "+ " + String.ValueOf((int) coefficient);
+    }
+    else{
+    //is double
+    if (coefficient < 0){ result = result + "- " + (String.ValueOf(-1 *  coefficient));}
+   else result = result + "+ " + String.ValueOf(coefficient);
+    }
    
-if (exponent == 1){ result = result + "x"}
+if (exponent == 1){ result = result + "x";}
    else if (exponent == 0){} 
-   else {result	= result + "x^" + (String) (exponent); 
-   
+   else {result	= result + "x^" + String.ValueOf(exponent); 
+   }
        return result;
     }
 }

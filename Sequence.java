@@ -52,9 +52,9 @@ public class Sequence
     // returns a new array holding the differences between adjacent items on sequence 
     public double[] differences()
     { 
-    double[] seqDiff = new double[sequence.length -1]
+    double[] seqDiff = new double[sequence.length -1];
     for (int i =0;i < sequence.length -1;i++){ 
-	  seqDiff[i] = sequence[i+1] - sequence[i]
+	  seqDiff[i] = sequence[i+1] - sequence[i];
        }
         // TODO
         return seqDiff;
@@ -67,17 +67,18 @@ public class Sequence
        sequence[i-1] = sequence[i-1]-(Math.pow(i,t.getExponent()) * t.getCoefficient());
         // TODO
     }
+    }
 
     // returns the next term in the simplest polynomial that generates sequence 
     // implements Steps 1-3 of the algorithm description on the project web page 
     public Term nextTerm()
     { int NoRuns = 0;
     double[] T = sequence;
-    while(!allEqual){ sequence = differences();
+    while(!allEqual()){ sequence = differences();
     NoRuns = NoRuns + 1; 
     }
     double something = sequence[0];
-    sequence = T
+    sequence = T;
       
         return new Term(something/factorial(NoRuns), NoRuns);
     }
@@ -92,7 +93,7 @@ updateSequence(j);
 finPoly.addTerm(j);
 }
 
-finPoly.addTerm(new term(sequence[0], int 0));
+finPoly.addTerm(new Term(sequence[0], 0));
         // TODO
  System.out.println(finPoly.display());
       return finPoly;
