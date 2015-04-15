@@ -76,9 +76,10 @@ public class Sequence
     while(!allEqual){ sequence = differences();
     NoRuns = NoRuns + 1; 
     }
+    double something = sequence[0];
     sequence = T
       
-        return new Term(sequence[0]/factorial(NoRuns), NoRuns);
+        return new Term(something/factorial(NoRuns), NoRuns);
     }
 
     // returns the simplest polynomial that generates sequence and displays the polynomial as a String 
