@@ -31,7 +31,8 @@ public class Term
     // returns the term as a String for display 
     // see the sample file for the layout required 
     public String display()
-    {
+    { String result = "";
+if (coefficient < 0){ result = result "- "};
        // TODO
        return "";
     }

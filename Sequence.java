@@ -63,7 +63,8 @@ public class Sequence
     // subtracts from each item in sequence the effect of the term t 
     // implements Step 4 of the algorithm description on the project web page 
     public void updateSequence(Term t)
-    {
+    {  for (int i =1; i <= sequence.length; i++) {
+       sequence[i-1] = sequence[i-1]-(Math.pow(i,t.getExponent()) * t.getCoefficient());
         // TODO
     }
 
@@ -83,9 +84,18 @@ public class Sequence
     // returns the simplest polynomial that generates sequence and displays the polynomial as a String 
     // implements the algorithm description on the project web page 
     public Polynomial solveSequence()
-    {
+    {Polynomial finPoly = new Polynomial();     
+while (!allEqual()){
+Term j = nextTerm();
+updateSequence(j);
+finPoly.addTerm(j);
+}
+
+finPoly.addTerm(new term(sequence[0], int 0));
         // TODO
-        return null;
+ System.out.println(finPoly.display());
+      return finPoly;
+
     }
 
 }
