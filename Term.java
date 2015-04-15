@@ -32,8 +32,13 @@ public class Term
     // see the sample file for the layout required 
     public String display()
     { String result = "";
-if (coefficient < 0){ result = result "- "};
-       // TODO
-       return "";
+if (coefficient < 0){ result = result + "- " + ((String) (-1 *  coefficient))};
+   else result = result + "+ " + (String) coefficient;
+   
+if (exponent == 1){ result = result + "x"}
+   else if (exponent == 0){} 
+   else {result	= result + "x^" + (String) (exponent); 
+   
+       return result;
     }
 }

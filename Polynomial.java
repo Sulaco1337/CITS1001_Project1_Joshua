@@ -40,8 +40,13 @@ public class Polynomial
     // returns polynomial as a String for display 
     // see the sample file for the layout required 
     public String display()
-    {
-        // TODO
-        return "";
+    {String result = "";
+    for(Term t : polynomial){
+    result = result + " " + t.display();
+        } 
+    if (result.charAt(1) == '-'){
+        return result.substring(1);
+        else
+	  return result.substring(3);
     }
 }
